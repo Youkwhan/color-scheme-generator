@@ -9,10 +9,34 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
 		/>
+		<!-- google font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<h1>index.html</h1>
+		<main>
+			<nav>
+				<input id="color-picker" type="color" value="#F55A5A" />
+				<select id="scheme-picker">
+					<option>monochrome</option>
+					<option>monochrome-dark</option>
+					<option>monochrome-light</option>
+					<option>analogic</option>
+					<option>complement</option>
+					<option>analogic-complement</option>
+					<option>triad</option>
+					<option>quad</option>
+				</select>
+				<button id="get-color" type="submit">Get color scheme</button>
+			</nav>
+			<div id="color-scheme"></div>
+			<div id="color-hex"></div>
+		</main>
 		<script src="index.js"></script>
 	</body>
 </html>
