@@ -62,3 +62,9 @@ function renderPopupHTML(e) {
 		popupEl.style.opacity = 0;
 	}, 1500);
 }
+
+// dark mode onClick switch
+function darkMode() {
+	var element = document.body;
+	element.classList.toggle("dark-mode");
+ }
