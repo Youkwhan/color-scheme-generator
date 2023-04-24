@@ -1,11 +1,11 @@
 :root {
 	--ff-primary: "Inter", sans-serif;
 
-    --fw-regular: 400;
+	--fw-regular: 400;
 	--fw-semi-bold: 500;
 
-    --fs-400: 0.75rem;
-    --fs-500: 1rem;
+	--fs-400: 0.75rem;
+	--fs-500: 1rem;
 }
 
 /* Box sizing rules */
@@ -27,39 +27,103 @@ body {
 	height: 100%;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+	scroll-behavior: smooth;
 }
 
-body{
-    line-height: 1.5;
-    display: grid;
-    place-content: center;
-    font-family: var(--ff-primary);
+body {
+	line-height: 1.5;
+	font-family: var(--ff-primary);
+	display: flex;
+	align-items: center;
 }
 
-main{
-    max-width: 35em;
-    border: 1px solid lightgray;
-    border-radius: 1em;
-    padding: 1em;
+main {
+	width: 100%;
+	max-width: 40em;
+	margin: 0 auto;
+
+	border: 1px solid lightgray;
+	border-radius: 1em;
+	padding: 1em;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* typography */
+
+.scheme-picker {
+	font-size: var(--fs-500);
+	font-weight: var(--fw-regular);
 }
 
-.color-scheme{
-    display: grid;
-    grid-template: 32em / repeat(5, minmax(1em, 1fr)) ;
+.get-color-btn,
+.color-hex {
+	font-size: var(--fs-400);
+	font-weight: var(--fw-semi-bold);
+	text-align: center;
 }
 
-.color-hex{
-    display: grid;
-    grid-template: 2em / repeat(5, minmax(1em, 1fr));
-    font-size: var(--fs-400);
-    font-weight: var(--fw-semi-bold);
-    text-align: center;
+/* button,input */
+
+.color-picker,
+.scheme-picker,
+.get-color-btn {
+	cursor: pointer;
+	background-color: whitesmoke;
+	border: 1px solid #d1d5db;
+	border-radius: 6px;
+}
+
+.get-color-btn,
+.scheme-picker {
+	padding: 0.5em;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* layout */
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.75rem;
+	align-items: center;
+	padding: 1.5em 1em;
+}
+
+nav > * {
+	height: 2.5rem;
+	width: 100%;
+}
+
+nav > *:nth-child(1) {
+	flex: 1 1 20%;
+}
+nav > *:nth-child(2) {
+	flex: 1 1 60%;
+}
+nav > *:nth-child(3) {
+	flex: 1 1 20%;
+}
+
+nav > *:hover{
+ background-color: white;   
+}
+
+.color-scheme {
+	display: grid;
+	grid-template: 32em / repeat(5, minmax(0.5em, 1fr));
+}
+
+.color-hex {
+	margin-top: 0.75em;
+	display: grid;
+	grid-template: 2em / repeat(5, minmax(0.5em, 1fr));
+}
+
+.generated-color {
+	transition: all 0.2s ease-in-out;
+}
+
+.generated-color:hover,
+.generated-color:focus {
+	transform: scale(1.05);
 }

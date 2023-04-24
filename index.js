@@ -7,7 +7,7 @@ document.getElementById("get-color").addEventListener("click", () => {
 function getColorSchemeHTML(data) {
 	return data.colors
 		.map((color) => {
-			return `<div style="background-color:${color.hex.value}"></div>`;
+			return `<div class="generated-color" style="background-color:${color.hex.value}"></div>`;
 		})
 		.join("");
 }
@@ -16,7 +16,7 @@ function getColorSchemeHTML(data) {
 function getColorHexHTML(data) {
 	return data.colors
 		.map((color) => {
-			return `<div>${color.hex.value}</div>`;
+			return `<div class="generated-color">${color.hex.value}</div>`;
 		})
 		.join("");
 }
