@@ -61,4 +61,5 @@ nav{
     grid-template: 2em / repeat(5, minmax(1em, 1fr));
     font-size: var(--fs-400);
     font-weight: var(--fw-semi-bold);
+    text-align: center;
 }
